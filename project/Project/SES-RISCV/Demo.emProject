@@ -1,0 +1,156 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="WITIN_KWS_INNER" target="20" version="2">
+  <project Name="WITIN_PROJECT">
+    <configuration
+      JLinkExecuteCommand=""
+      JLinkScriptFileName="$(ProjectDir)/../../WTM2101_SDK/Common/Libraries/Device/WITIN/WTM2101/Script/wtm2101_4w.JLinkScript"
+      Name="Common"
+      arm_compiler_variant="gcc"
+      arm_keep_assembly="No"
+      arm_keep_preprocessor_output="No"
+      arm_linker_heap_size="1024"
+      arm_linker_stack_size="1024"
+      build_always_rebuild="No"
+      build_treat_warnings_as_errors="Yes"
+      c_additional_options_from_file=""
+      c_only_additional_options="-fsingle-precision-constant;-finline-functions;-falign-functions=4;-falign-jumps=4;-falign-loops=4;-finline-limit=600;-ftree-dominator-opts;-fno-if-conversion2;-fselective-scheduling;-fno-code-hoisting;-fno-common"
+      c_preprocessor_definitions="PLATFORM_RSIC_V_N307;__DSP_PRESENT;__ECLIC_PRESENT;CONFIG_$(Configuration)"
+      c_user_include_directories="$(ProjectDir)/../../WTM2101_SDK/Common/Libraries/Device/WITIN/WTM2101/Include/;$(ProjectDir)/../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/inc/;$(ProjectDir)/../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Inc/;$(ProjectDir)/../../WTM2101_SDK/Common/Libraries/WTM2101_NPU_Lib/inc/;$(ProjectDir)/../../WTM2101_SDK/Common/Libraries/NMSIS/Core/Include/;$(ProjectDir)/../../WTM2101_SDK/Common/Libraries/NMSIS/DSP/Include/;$(ProjectDir)/../../WTM2101_SDK/Common/Libraries/NMSIS/NN/Include/;$(ProjectDir)/../../WTM2101_SDK/Common/Libraries/HAL_Driver/inc/;$(ProjectDir)/../../WTM2101_SDK/Utilities/RTT/;$(ProjectDir)/../../WTM2101_SDK/Common/Middlewares/ring_cache/;$(ProjectDir)/../../WTM2101_SDK/Common/Middlewares/heap/;$(ProjectDir)/../../WTM2101_SDK/Common/Libraries/WTM2101_Ucontext/Inc/;$(ProjectDir)/../../Tools/WitinProgramTool_WTM2101/LibNPU/;$(ProjectDir)/../Inc/;$(ProjectDir)/../NpuHal/;$(ProjectDir)/../Common/third_hardware/inc/;$(ProjectDir)/../Common/third_software/inc/;$(ProjectDir)/../Common/link/;$(ProjectDir)/../Common/uart_protocol/;$(ProjectDir)/../Core/npu_driver_bb04/inc/;$(ProjectDir)/../Core/fbank/inc/"
+      debug_target_connection="J-Link"
+      gcc_debugging_level="Level 3"
+      gcc_entry_point="vector_base"
+      gcc_optimization_level="Level 3 for more speed"
+      gcc_short_enum="Minimal Container Size"
+      link_dependent_projects="Yes"
+      link_include_standard_libraries="Yes"
+      link_use_linker_script_file="Yes"
+      linker_additional_files="../Lib/$(Configuration)/Library.a"
+      linker_output_format="bin"
+      linker_printf_fp_enabled="Float"
+      linker_printf_width_precision_supported="Yes"
+      linker_scanf_character_group_matching_enabled="No"
+      linker_section_placement_file="Setup/sram_placement_riscv.xml"
+      linker_section_placements_segments="FLASH1 RX 0x00000000 0x00100000;RAM1 RWX 0x20000000 0x00010000"
+      project_dependencies="Library"
+      project_directory=""
+      project_type="Executable"
+      rv_abi="ilp32f"
+      rv_architecture="rv32imafc"
+      speed="4000"
+      stack_size="1024"
+      target_device_name="WTM2101" />
+    <configuration
+      JLinkScriptFileName="$(ProjectDir))/../Common/link/bb04p1_4w.JLinkScript"
+      Name="RAM_DEMO"
+      build_output_directory="Output/$(Configuration)/Exe"
+      c_additional_options_from_file=""
+      c_only_additional_options="-fsingle-precision-constant;-finline-functions;-falign-functions=4;-falign-jumps=4;-falign-loops=4;-finline-limit=600;-ftree-dominator-opts;-fno-if-conversion2;-fselective-scheduling;-fno-code-hoisting;-fno-common"
+      c_preprocessor_definitions="NOT_QSPI_BOOT"
+      debug_initial_breakpoint="main"
+      debug_restrict_memory_access="No"
+      debug_startup_completion_point="main"
+      gcc_optimization_level="Level 3 for more speed"
+      link_linker_script_file="$(ProjectDir))/../Common/link/ilm_dlm.ld"
+      linker_printf_fp_enabled="Float"
+      target_interface_type="JTAG" />
+    <folder Name="Application/User">
+      <file file_name="../Src/wtm2101_it.c" />
+      <file file_name="../Src/main.c" />
+    </folder>
+    <folder Name="Drivers/WTM2101_StdPeriph_Lib">
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/afc.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/audio.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/dma.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/fbank.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/gpio.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/i2c.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/i2s.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/npu.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/pmu.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/pwm.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/qspi.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/rcc.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/rtc.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/spi.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/timer.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/uart.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/wdt.c" />
+    </folder>
+    <folder Name="third_hardware">
+      <file file_name="../Common/third_hardware/src/audio_config.c" />
+      <file file_name="../Common/third_hardware/src/ES8311.c" />
+      <file file_name="../Common/third_hardware/src/fbank_config.c" />
+      <file file_name="../Common/third_hardware/src/gpio_config.c" />
+      <file file_name="../Common/third_hardware/src/rtc_config.c" />
+      <file file_name="../Common/third_hardware/src/spi_config.c" />
+      <file file_name="../Common/third_hardware/src/uart_config.c" />
+      <file file_name="../Common/third_hardware/src/uart_dma.inl.h" />
+      <file file_name="../Common/third_hardware/src/uart_rx_dma.c" />
+      <file file_name="../Common/third_hardware/src/uart_tx_config.c" />
+      <file file_name="../Common/third_hardware/src/i2c_config.c" />
+    </folder>
+    <folder Name="third_software">
+      <file file_name="../../WTM2101_SDK/Common/Middlewares/heap/heap.c" />
+      <file file_name="../../WTM2101_SDK/Common/Middlewares/ring_cache/ring_cache.c" />
+    </folder>
+    <folder Name="Drivers/Coroutine">
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_Ucontext/Src/riscv_intrinsic.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_Ucontext/Src/ucontext.s" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_Ucontext/Src/ucontext_c.c" />
+    </folder>
+    <folder Name="__config__">
+      <file file_name="../Inc/basic_config.h" />
+      <file file_name="../Inc/config_common.h" />
+      <file file_name="../Inc/config_ram_demo.h" />
+    </folder>
+    <folder Name="Application/Project">
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Src/intexc_NUCLEI_N.S" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Src/osc_clock_calibration.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Src/retarget.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Src/startup_NUCLEI_N.S" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Src/wtm2101_hal.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Src/wtm2101_mmap.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Src/wtm2101_system.c" />
+    </folder>
+    <configuration
+      Name="RAM_K1_IISMIC_REALTIME_HSI24Mx2"
+      c_preprocessor_definitions="__ECLIC_PRESENT;PLATFORM_RSIC_V_N307;CONFIG_$(Configuration);HSI_VALUE=24576000;HSE_VALUE=24576000"
+      gcc_optimization_level="Level 2 for size"
+      link_linker_script_file="../Drivers/Device/WITIN/BB04P1/Script/ram.ld" />
+    <configuration
+      Name="QSPI_K1_IISMIC_REALTIME_HSI24Mx2"
+      c_preprocessor_definitions="__ECLIC_PRESENT;PLATFORM_RSIC_V_N307;CONFIG_$(Configuration);HSI_VALUE=24576000;HSE_VALUE=24576000"
+      link_linker_script_file="../Drivers/Device/WITIN/BB04P1/Script/ram_qspi.ld" />
+    <folder Name="Application/NPU">
+      <file file_name="../NpuHal/npu_hal.c" />
+      <file file_name="../NpuHal/npu_hal.h" />
+      <file file_name="../../WitinProgramTool_WTM2101/LibNPU/LibNPU.a" />
+      <file file_name="../../Model/register.c" />
+    </folder>
+    <folder Name="HAL">
+      <file file_name="../../WTM2101_SDK/Common/Libraries/HAL_Driver/src/hal_audio.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/HAL_Driver/src/hal_clock.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/HAL_Driver/src/hal_i2s.c" />
+      <file file_name="../../WTM2101_SDK/Common/Libraries/HAL_Driver/src/hal_uart.c" />
+    </folder>
+    <folder Name="RTT">
+      <file file_name="../../WTM2101_SDK/Utilities/RTT/SEGGER_RTT.c" />
+      <file file_name="../../WTM2101_SDK/Utilities/RTT/SEGGER_RTT.h" />
+      <file file_name="../../WTM2101_SDK/Utilities/RTT/SEGGER_RTT_Conf.h" />
+      <file file_name="../../WTM2101_SDK/Utilities/RTT/SEGGER_RTT_Syscalls_SES.c" />
+    </folder>
+    <folder Name="uart_protocol">
+      <file file_name="../Common/uart_protocol/trans_protocol.c" />
+    </folder>
+    <folder Name="Fbank">
+      <file file_name="../Core/fbank/src/feature_params.c" />
+      <file file_name="../Core/fbank/src/feature_tools.c" />
+      <file file_name="../Core/fbank/src/witin_math_lib.c" />
+    </folder>
+    <folder Name="juju" />
+  </project>
+  <configuration
+    Name="RAM_DEMO"
+    gcc_debugging_level="Level 3"
+    gcc_optimization_level="Level 3 for more speed" />
+</solution>

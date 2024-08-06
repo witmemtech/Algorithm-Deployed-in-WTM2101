@@ -1,0 +1,1 @@
+3a9992b537 fix bug: alloc memory align with 4 bytes, avoid npu dma（npu -> soc） error	

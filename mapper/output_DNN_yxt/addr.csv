@@ -1,0 +1,13 @@
+net_idx,layer_name,layer_type,round_type,round_idx,flow_idx,in/out,addr,type,len,file
+
+
+0,"linear_1","OpType::MV_OP",array,0,1,in,2050,regfile,800,layer_debug/net0/1_linear_1/round0/input0.txt
+0,"linear_1","OpType::MV_OP",array,0,1,out,256,regfile,256,layer_debug/net0/1_linear_1/round0/output0.txt
+0,"linear_2","OpType::MV_OP",array,1,1,in,256,regfile,256,layer_debug/net0/2_linear_2/round1/input0.txt
+0,"linear_2","OpType::MV_OP",array,1,1,out,768,regfile,256,layer_debug/net0/2_linear_2/round1/output0.txt
+0,"linear_3","OpType::MV_OP",array,2,1,in,768,regfile,256,layer_debug/net0/3_linear_3/round2/input0.txt
+0,"linear_3","OpType::MV_OP",array,2,1,out,1280,regfile,256,layer_debug/net0/3_linear_3/round2/output0.txt
+0,"linear_4","OpType::MV_OP",array,3,1,in,1280,regfile,256,layer_debug/net0/4_linear_4/round3/input0.txt
+0,"linear_4","OpType::MV_OP",array,3,1,out,1792,regfile,256,layer_debug/net0/4_linear_4/round3/output0.txt
+0,"linear_5","OpType::MV_OP",array,4,1,in,1792,regfile,256,layer_debug/net0/5_linear_5/round4/input0.txt
+0,"linear_5","OpType::MV_OP",array,4,1,out,2850,regfile,2,layer_debug/net0/5_linear_5/round4/output0.txt

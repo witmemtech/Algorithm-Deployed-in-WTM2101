@@ -1,0 +1,11 @@
+unsigned int wslhash_rs(void* _str, unsigned int len);
+unsigned int wslhash_js(void* _str, unsigned int len);
+unsigned int wslhash_pjw(void* _str, unsigned int len);
+unsigned int wslhash_elf(void* _str, unsigned int len);
+unsigned int wslhash_bkd(void* _str, unsigned int len);
+unsigned int wslhash_sdbm(void* _str, unsigned int len);
+unsigned int wslhash_djb(void* _str, unsigned int len);
+unsigned int wslhash_dek(void* _str, unsigned int len);
+unsigned int wslhash_bp(void* _str, unsigned int len);
+unsigned int wslhash_fnv(void* _str, unsigned int len);
+unsigned int wslhash_ap(void* _str, unsigned int len);

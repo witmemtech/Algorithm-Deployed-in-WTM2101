@@ -1,0 +1,253 @@
+{
+	"chip" : "ChipId::BB04P1",
+	"model_name" : "model_1_net_in_linear_5",
+	"net_total" : 1,
+	"nets" : 
+	[
+		{
+			"compensate_en" : true,
+			"compensate_type" : "CompensateType::DYNAMIC",
+			"compute_flow_debug" : 
+			[
+				[
+					{
+						"flow_index" : 1,
+						"inputs" : 
+						[
+							{
+								"buffer_len" : 800,
+								"data_bit" : 8,
+								"data_type" : "net_input",
+								"input_len" : 800,
+								"mem_type" : "regfile",
+								"operation_type" : "array",
+								"start_addr" : 2050,
+								"store_file_path" : "layer_debug/net0/1_linear_1/round0/input0.txt",
+								"update_len" : 800,
+								"update_stride" : 800
+							}
+						],
+						"layer_name" : "linear_1",
+						"layer_type" : "OpType::MV_OP",
+						"outputs" : 
+						[
+							{
+								"buffer_len" : 256,
+								"data_bit" : 8,
+								"data_type" : "layer_output",
+								"mem_type" : "regfile",
+								"operation_type" : "array",
+								"output_len" : 256,
+								"start_addr" : 256,
+								"start_offset" : 0,
+								"store_file_path" : "layer_debug/net0/1_linear_1/round0/output0.txt",
+								"update_len" : 256,
+								"update_stride" : 256
+							}
+						],
+						"package_len" : 5,
+						"round_config_start" : 0,
+						"round_index" : 0
+					},
+					{
+						"flow_index" : 1,
+						"inputs" : 
+						[
+							{
+								"buffer_len" : 256,
+								"data_bit" : 8,
+								"data_type" : "layer_input",
+								"input_len" : 256,
+								"mem_type" : "regfile",
+								"operation_type" : "array",
+								"start_addr" : 256,
+								"store_file_path" : "layer_debug/net0/2_linear_2/round1/input0.txt",
+								"update_len" : 256,
+								"update_stride" : 256
+							}
+						],
+						"layer_name" : "linear_2",
+						"layer_type" : "OpType::MV_OP",
+						"outputs" : 
+						[
+							{
+								"buffer_len" : 256,
+								"data_bit" : 8,
+								"data_type" : "layer_output",
+								"mem_type" : "regfile",
+								"operation_type" : "array",
+								"output_len" : 256,
+								"start_addr" : 768,
+								"start_offset" : 0,
+								"store_file_path" : "layer_debug/net0/2_linear_2/round1/output0.txt",
+								"update_len" : 256,
+								"update_stride" : 256
+							}
+						],
+						"package_len" : 5,
+						"round_config_start" : 10,
+						"round_index" : 1
+					},
+					{
+						"flow_index" : 1,
+						"inputs" : 
+						[
+							{
+								"buffer_len" : 256,
+								"data_bit" : 8,
+								"data_type" : "layer_input",
+								"input_len" : 256,
+								"mem_type" : "regfile",
+								"operation_type" : "array",
+								"start_addr" : 768,
+								"store_file_path" : "layer_debug/net0/3_linear_3/round2/input0.txt",
+								"update_len" : 256,
+								"update_stride" : 256
+							}
+						],
+						"layer_name" : "linear_3",
+						"layer_type" : "OpType::MV_OP",
+						"outputs" : 
+						[
+							{
+								"buffer_len" : 256,
+								"data_bit" : 8,
+								"data_type" : "layer_output",
+								"mem_type" : "regfile",
+								"operation_type" : "array",
+								"output_len" : 256,
+								"start_addr" : 1280,
+								"start_offset" : 0,
+								"store_file_path" : "layer_debug/net0/3_linear_3/round2/output0.txt",
+								"update_len" : 256,
+								"update_stride" : 256
+							}
+						],
+						"package_len" : 5,
+						"round_config_start" : 20,
+						"round_index" : 2
+					},
+					{
+						"flow_index" : 1,
+						"inputs" : 
+						[
+							{
+								"buffer_len" : 256,
+								"data_bit" : 8,
+								"data_type" : "layer_input",
+								"input_len" : 256,
+								"mem_type" : "regfile",
+								"operation_type" : "array",
+								"start_addr" : 1280,
+								"store_file_path" : "layer_debug/net0/4_linear_4/round3/input0.txt",
+								"update_len" : 256,
+								"update_stride" : 256
+							}
+						],
+						"layer_name" : "linear_4",
+						"layer_type" : "OpType::MV_OP",
+						"outputs" : 
+						[
+							{
+								"buffer_len" : 256,
+								"data_bit" : 8,
+								"data_type" : "layer_output",
+								"mem_type" : "regfile",
+								"operation_type" : "array",
+								"output_len" : 256,
+								"start_addr" : 1792,
+								"start_offset" : 0,
+								"store_file_path" : "layer_debug/net0/4_linear_4/round3/output0.txt",
+								"update_len" : 256,
+								"update_stride" : 256
+							}
+						],
+						"package_len" : 5,
+						"round_config_start" : 30,
+						"round_index" : 3
+					},
+					{
+						"flow_index" : 1,
+						"inputs" : 
+						[
+							{
+								"buffer_len" : 256,
+								"data_bit" : 8,
+								"data_type" : "layer_input",
+								"input_len" : 256,
+								"mem_type" : "regfile",
+								"operation_type" : "array",
+								"start_addr" : 1792,
+								"store_file_path" : "layer_debug/net0/5_linear_5/round4/input0.txt",
+								"update_len" : 256,
+								"update_stride" : 256
+							}
+						],
+						"layer_name" : "linear_5",
+						"layer_type" : "OpType::MV_OP",
+						"outputs" : 
+						[
+							{
+								"buffer_len" : 2,
+								"data_bit" : 8,
+								"data_type" : "net_output",
+								"mem_type" : "regfile",
+								"operation_type" : "array",
+								"output_len" : 2,
+								"start_addr" : 2850,
+								"start_offset" : 0,
+								"store_file_path" : "layer_debug/net0/5_linear_5/round4/output0.txt",
+								"update_len" : 2,
+								"update_stride" : 2
+							}
+						],
+						"package_len" : 5,
+						"round_config_start" : 40,
+						"round_index" : 4
+					}
+				]
+			],
+			"diff_lookup_table" : 
+			{
+				"data" : "0x03020100,0x07060504,0x0b0a0908,0x0f0e0d0c,0x13121110,0x17161514,0x1b1a1918,0x1f1e1d1c,0x23222120,0x27262524,0x2b2a2928,0x2f2e2d2c,0x33323130,0x37363534,0x3b3a3938,0x3f3e3d3c,0x43424140,0x47464544,0x4b4a4948,0x4f4e4d4c,0x53525150,0x57565554,0x5b5a5958,0x5f5e5d5c,0x63626160,0x67666564,0x6b6a6968,0x6f6e6d6c,0x73727170,0x77767574,0x7b7a7978,0x7f7e7d7c,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x00000000,0x03020100,0x07060504,0x0b0a0908,0x0f0e0d0c,0x13121110,0x17161514,0x1b1a1918,0x1f1e1d1c,0x23222120,0x27262524,0x2b2a2928,0x2f2e2d2c,0x33323130,0x37363534,0x3b3a3938,0x3f3e3d3c,0x43424140,0x47464544,0x4b4a4948,0x4f4e4d4c,0x53525150,0x57565554,0x5b5a5958,0x5f5e5d5c,0x63626160,0x67666564,0x6b6a6968,0x6f6e6d6c,0x73727170,0x77767574,0x7b7a7978,0x7f7e7d7c,0x83828180,0x87868584,0x8b8a8988,0x8f8e8d8c,0x93929190,0x97969594,0x9b9a9998,0x9f9e9d9c,0xa3a2a1a0,0xa7a6a5a4,0xabaaa9a8,0xafaeadac,0xb3b2b1b0,0xb7b6b5b4,0xbbbab9b8,0xbfbebdbc,0xc3c2c1c0,0xc7c6c5c4,0xcbcac9c8,0xcfcecdcc,0xd3d2d1d0,0xd7d6d5d4,0xdbdad9d8,0xdfdedddc,0xe3e2e1e0,0xe7e6e5e4,0xebeae9e8,0xefeeedec,0xf3f2f1f0,0xf7f6f5f4,0xfbfaf9f8,0xfffefdfc,",
+				"len" : 512,
+				"offset" : 6100
+			},
+			"fifo_en" : null,
+			"fifo_update_len" : 800,
+			"max_dma_len" : 0,
+			"net_cnt" : 0,
+			"net_inputs" : 
+			[
+				{
+					"addr" : 2050,
+					"comment" : "in",
+					"len" : 800,
+					"shape" : 
+					[
+						1,
+						800
+					],
+					"type" : "regfile"
+				}
+			],
+			"net_outputs" : 
+			[
+				{
+					"addr" : 2850,
+					"comment" : "linear_5",
+					"len" : 2,
+					"shape" : 
+					[
+						1,
+						2
+					],
+					"type" : "regfile"
+				}
+			],
+			"round_total" : 5
+		}
+	],
+	"time" : "2023-10-18-11-35-36",
+	"version" : "v001.000.034"
+}

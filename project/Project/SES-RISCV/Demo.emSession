@@ -1,0 +1,96 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks>
+  <BookmarkItem objectName="" line="154" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="33" extra="if (strncmp((const char *)&amp;pack_buffer.type, &quot;bye_&quot;, 4) == 0)" color="5"/>
+  <BookmarkItem objectName="" line="38" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="1" extra="int caculateCheckValue(void *pData, int len) {" color="5"/>
+  <BookmarkItem objectName="" line="52" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="2" extra="int cksum = caculateCheckValue(pack->data, pack->length);" color="5"/>
+  <BookmarkItem objectName="" line="95" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="19" extra="MSG_PACK pack_buffer;" color="5"/>
+  <BookmarkItem objectName="" line="97" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="20" extra="memset(&amp;pack_buffer, 0, sizeof(MSG_PACK));" color="5"/>
+  <BookmarkItem objectName="" line="101" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="21" extra="memcpy(&amp;pack_buffer.type, &amp;trans_type[type], 4);" color="5"/>
+  <BookmarkItem objectName="" line="119" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="22" extra="pack_buffer.length = pack_len;" color="5"/>
+  <BookmarkItem objectName="" line="120" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="23" extra="memcpy(&amp;pack_buffer.data, pData, pack_len);" color="5"/>
+  <BookmarkItem objectName="" line="121" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="24" extra="send_pack_all(&amp;pack_buffer);" color="5"/>
+  <BookmarkItem objectName="" line="125" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="25" extra="memset(&amp;pack_buffer, 0, sizeof(MSG_PACK));" color="5"/>
+  <BookmarkItem objectName="" line="129" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="26" extra="receive_pack_head(&amp;pack_buffer);" color="5"/>
+  <BookmarkItem objectName="" line="130" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="27" extra="if (strncmp((const char *)&amp;pack_buffer.type, (const char *)&amp;trans_type[type], 4) == 0) {" color="5"/>
+  <BookmarkItem objectName="" line="143" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="28" extra="if (pack_len == pack_buffer.length) {" color="5"/>
+  <BookmarkItem objectName="" line="144" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="29" extra="receive_pack_data(&amp;pack_buffer);" color="5"/>
+  <BookmarkItem objectName="" line="145" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="30" extra="int calc_sum = caculateCheckValue(pack_buffer.data, pack_len);" color="5"/>
+  <BookmarkItem objectName="" line="146" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="31" extra="if(calc_sum != pack_buffer.checksum){" color="5"/>
+  <BookmarkItem objectName="" line="149" column="-1" path="D:/code/project_kws_230925/project_kws/Project/Common/uart_protocol/trans_protocol.c" number="32" extra="memcpy(pData, pack_buffer.data, pack_len);" color="5"/>
+ </Bookmarks>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints">
+  <BreakpointListItem trigger="" line="37" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../WTM2101_SDK/Common/Libraries/HAL_Driver/src/hal_audio.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="39" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../WTM2101_SDK/Common/Libraries/HAL_Driver/src/hal_audio.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="110" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../Src/main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="128" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../Common/uart_protocol/trans_protocol.c" useHWbreakpoint="false"/>
+ </Breakpoints>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
+ </FrameBufferWindow>
+ <Memory1>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="WITIN_PROJECT" radix="16" sizeText="" addressText=""/>
+ </Memory1>
+ <Memory2>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="WITIN_PROJECT" radix="16" sizeText="" addressText=""/>
+ </Memory2>
+ <Memory3>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="WITIN_PROJECT" radix="16" sizeText="" addressText=""/>
+ </Memory3>
+ <Memory4>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="WITIN_PROJECT" radix="16" sizeText="" addressText=""/>
+ </Memory4>
+ <Project>
+  <ProjectSessionItem path="WITIN_KWS_INNER"/>
+  <ProjectSessionItem path="WITIN_KWS_INNER;WITIN_PROJECT"/>
+  <ProjectSessionItem path="WITIN_KWS_INNER;WITIN_PROJECT;__config__"/>
+  <ProjectSessionItem path="WITIN_KWS_INNER;WITIN_PROJECT;Application/NPU"/>
+  <ProjectSessionItem path="WITIN_KWS_INNER;WITIN_PROJECT;Application/Project"/>
+  <ProjectSessionItem path="WITIN_KWS_INNER;WITIN_PROJECT;Application/User"/>
+  <ProjectSessionItem path="WITIN_KWS_INNER;WITIN_PROJECT;Drivers/Coroutine"/>
+  <ProjectSessionItem path="WITIN_KWS_INNER;WITIN_PROJECT;Drivers/WTM2101_StdPeriph_Lib"/>
+  <ProjectSessionItem path="WITIN_KWS_INNER;WITIN_PROJECT;Fbank"/>
+  <ProjectSessionItem path="WITIN_KWS_INNER;WITIN_PROJECT;HAL"/>
+  <ProjectSessionItem path="WITIN_KWS_INNER;WITIN_PROJECT;third_hardware"/>
+  <ProjectSessionItem path="WITIN_KWS_INNER;WITIN_PROJECT;uart_protocol"/>
+ </Project>
+ <Register1>
+  <RegisterWindow visibleNodes="ABI, RV32I/pc;ABI, RV32I/ra;ABI, RV32I/sp;ABI, RV32I/gp;ABI, RV32I/tp;ABI, RV32I/a0;ABI, RV32I/a1;ABI, RV32I/a2;ABI, RV32I/a3;ABI, RV32I/a4;ABI, RV32I/a5;ABI, RV32I/a6;ABI, RV32I/a7;ABI, RV32I/t0;ABI, RV32I/t1;ABI, RV32I/t2;ABI, RV32I/t3;ABI, RV32I/t4;ABI, RV32I/t5;ABI, RV32I/t6;ABI, RV32I/s0;ABI, RV32I/s1;ABI, RV32I/s2;ABI, RV32I/s3;ABI, RV32I/s4;ABI, RV32I/s5;ABI, RV32I/s6;ABI, RV32I/s7;ABI, RV32I/s8;ABI, RV32I/s9;ABI, RV32I/s10;ABI, RV32I/s11;ABI, RV32E/pc;ABI, RV32E/ra;ABI, RV32E/sp;ABI, RV32E/gp;ABI, RV32E/tp;ABI, RV32E/a0;ABI, RV32E/a1;ABI, RV32E/a2;ABI, RV32E/a3;ABI, RV32E/a4;ABI, RV32E/a5;ABI, RV32E/t0;ABI, RV32E/t1;ABI, RV32E/t2;ABI, RV32E/s0;ABI, RV32E/s1;CPU/pc;CPU/ra;CPU/sp;CPU/gp;CPU/tp;CPU/t0;CPU/t1;CPU/t2;CPU/s0;CPU/s1;CPU/a0;CPU/a1;CPU/a2;CPU/a3;CPU/a4;CPU/a5;CPU/a6;CPU/a7;CPU/s2;CPU/s3;CPU/s4;CPU/s5;CPU/s6;CPU/s7;CPU/s8;CPU/s9;CPU/s10;CPU/s11;CPU/t3;CPU/t4;CPU/t5;CPU/t6" binaryNodes="" asciiNodes="" openNodes="ABI, RV32I;ABI, RV32E;CPU" name="WITIN_PROJECT" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register1>
+ <Register2>
+  <RegisterWindow visibleNodes="ABI, RV32I/pc;ABI, RV32I/ra;ABI, RV32I/sp;ABI, RV32I/gp;ABI, RV32I/tp;ABI, RV32I/a0;ABI, RV32I/a1;ABI, RV32I/a2;ABI, RV32I/a3;ABI, RV32I/a4;ABI, RV32I/a5;ABI, RV32I/a6;ABI, RV32I/a7;ABI, RV32I/t0;ABI, RV32I/t1;ABI, RV32I/t2;ABI, RV32I/t3;ABI, RV32I/t4;ABI, RV32I/t5;ABI, RV32I/t6;ABI, RV32I/s0;ABI, RV32I/s1;ABI, RV32I/s2;ABI, RV32I/s3;ABI, RV32I/s4;ABI, RV32I/s5;ABI, RV32I/s6;ABI, RV32I/s7;ABI, RV32I/s8;ABI, RV32I/s9;ABI, RV32I/s10;ABI, RV32I/s11;ABI, RV32E/pc;ABI, RV32E/ra;ABI, RV32E/sp;ABI, RV32E/gp;ABI, RV32E/tp;ABI, RV32E/a0;ABI, RV32E/a1;ABI, RV32E/a2;ABI, RV32E/a3;ABI, RV32E/a4;ABI, RV32E/a5;ABI, RV32E/t0;ABI, RV32E/t1;ABI, RV32E/t2;ABI, RV32E/s0;ABI, RV32E/s1;CPU/pc;CPU/ra;CPU/sp;CPU/gp;CPU/tp;CPU/t0;CPU/t1;CPU/t2;CPU/s0;CPU/s1;CPU/a0;CPU/a1;CPU/a2;CPU/a3;CPU/a4;CPU/a5;CPU/a6;CPU/a7;CPU/s2;CPU/s3;CPU/s4;CPU/s5;CPU/s6;CPU/s7;CPU/s8;CPU/s9;CPU/s10;CPU/s11;CPU/t3;CPU/t4;CPU/t5;CPU/t6" binaryNodes="" asciiNodes="" openNodes="ABI, RV32I;ABI, RV32E;CPU" name="WITIN_PROJECT" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register2>
+ <Register3>
+  <RegisterWindow visibleNodes="ABI, RV32I/pc;ABI, RV32I/ra;ABI, RV32I/sp;ABI, RV32I/gp;ABI, RV32I/tp;ABI, RV32I/a0;ABI, RV32I/a1;ABI, RV32I/a2;ABI, RV32I/a3;ABI, RV32I/a4;ABI, RV32I/a5;ABI, RV32I/a6;ABI, RV32I/a7;ABI, RV32I/t0;ABI, RV32I/t1;ABI, RV32I/t2;ABI, RV32I/t3;ABI, RV32I/t4;ABI, RV32I/t5;ABI, RV32I/t6;ABI, RV32I/s0;ABI, RV32I/s1;ABI, RV32I/s2;ABI, RV32I/s3;ABI, RV32I/s4;ABI, RV32I/s5;ABI, RV32I/s6;ABI, RV32I/s7;ABI, RV32I/s8;ABI, RV32I/s9;ABI, RV32I/s10;ABI, RV32I/s11;ABI, RV32E/pc;ABI, RV32E/ra;ABI, RV32E/sp;ABI, RV32E/gp;ABI, RV32E/tp;ABI, RV32E/a0;ABI, RV32E/a1;ABI, RV32E/a2;ABI, RV32E/a3;ABI, RV32E/a4;ABI, RV32E/a5;ABI, RV32E/t0;ABI, RV32E/t1;ABI, RV32E/t2;ABI, RV32E/s0;ABI, RV32E/s1;CPU/pc;CPU/ra;CPU/sp;CPU/gp;CPU/tp;CPU/t0;CPU/t1;CPU/t2;CPU/s0;CPU/s1;CPU/a0;CPU/a1;CPU/a2;CPU/a3;CPU/a4;CPU/a5;CPU/a6;CPU/a7;CPU/s2;CPU/s3;CPU/s4;CPU/s5;CPU/s6;CPU/s7;CPU/s8;CPU/s9;CPU/s10;CPU/s11;CPU/t3;CPU/t4;CPU/t5;CPU/t6" binaryNodes="" asciiNodes="" openNodes="ABI, RV32I;ABI, RV32E;CPU" name="WITIN_PROJECT" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register3>
+ <Register4>
+  <RegisterWindow visibleNodes="ABI, RV32I/pc;ABI, RV32I/ra;ABI, RV32I/sp;ABI, RV32I/gp;ABI, RV32I/tp;ABI, RV32I/a0;ABI, RV32I/a1;ABI, RV32I/a2;ABI, RV32I/a3;ABI, RV32I/a4;ABI, RV32I/a5;ABI, RV32I/a6;ABI, RV32I/a7;ABI, RV32I/t0;ABI, RV32I/t1;ABI, RV32I/t2;ABI, RV32I/t3;ABI, RV32I/t4;ABI, RV32I/t5;ABI, RV32I/t6;ABI, RV32I/s0;ABI, RV32I/s1;ABI, RV32I/s2;ABI, RV32I/s3;ABI, RV32I/s4;ABI, RV32I/s5;ABI, RV32I/s6;ABI, RV32I/s7;ABI, RV32I/s8;ABI, RV32I/s9;ABI, RV32I/s10;ABI, RV32I/s11;ABI, RV32E/pc;ABI, RV32E/ra;ABI, RV32E/sp;ABI, RV32E/gp;ABI, RV32E/tp;ABI, RV32E/a0;ABI, RV32E/a1;ABI, RV32E/a2;ABI, RV32E/a3;ABI, RV32E/a4;ABI, RV32E/a5;ABI, RV32E/t0;ABI, RV32E/t1;ABI, RV32E/t2;ABI, RV32E/s0;ABI, RV32E/s1;CPU/pc;CPU/ra;CPU/sp;CPU/gp;CPU/tp;CPU/t0;CPU/t1;CPU/t2;CPU/s0;CPU/s1;CPU/a0;CPU/a1;CPU/a2;CPU/a3;CPU/a4;CPU/a5;CPU/a6;CPU/a7;CPU/s2;CPU/s3;CPU/s4;CPU/s5;CPU/s6;CPU/s7;CPU/s8;CPU/s9;CPU/s10;CPU/s11;CPU/t3;CPU/t4;CPU/t5;CPU/t6" binaryNodes="" asciiNodes="" openNodes="ABI, RV32I;ABI, RV32E;CPU" name="WITIN_PROJECT" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register4>
+ <Threads>
+  <ThreadsWindow showLists=""/>
+ </Threads>
+ <TraceWindow>
+  <Trace enabled="Yes"/>
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never">
+   <Watchpoint expression="frame_index" name="frame_index" radix="-1" linenumber="273" filename="../Src/main.c"/>
+   <Watchpoint expression="uart_input" name="uart_input" radix="10" linenumber="275" filename="../Src/main.c"/>
+  </Watches>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never"/>
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never"/>
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never"/>
+ </Watch4>
+ <Files>
+  <SessionOpenFile windowGroup="DockEditLeft" x="12" y="243" useTextEdit="1" openedFrom="C:/workspace/Project/interphone/interphone_common230830/Segger/NpuHal/npu_hal.c" useBinaryEdit="0" left="0" path="../Src/main.c" selected="1" top="367" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="13" y="33" useTextEdit="1" openedFrom="D:/code/speechcommand_demo_ver1.1/project/Project/Src/main.c" useBinaryEdit="0" left="0" path="../Inc/config_ram_demo.h" selected="0" top="0" codecName="Default"/>
+ </Files>
+ <RISCVCrossStudioWindow activeProject="WITIN_PROJECT" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="RAM_DEMO" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/workspace/zyx/project_kws/Project/Core/fbank/src" debugSearchPath="" autoConnectCapabilities="1151"/>
+</session>
