@@ -1,5 +1,7 @@
 # 【基于存内计算芯片开发板验证语音识别】 训练手册
 
+[WTM2101 Speech Recognition Video ](https://www.youtube.com/watch?v=jOrEGvNcjF0)
+
 ## ⽬录 
 
 ### 实验环境搭建 
