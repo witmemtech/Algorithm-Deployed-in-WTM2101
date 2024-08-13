@@ -1,0 +1,11 @@
+~$*.xlsx
+~$*.docx
+.vscode
+*.axf
+*.bak
+*.bin
+*.elf
+*.exe
+*.lib
+*.o
+tags

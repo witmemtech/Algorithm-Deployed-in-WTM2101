@@ -1,0 +1,30 @@
+/*
+File    : WTM2101.JLinkScript
+Purpose : Script for WTM2101 under cJTAG
+Author  : Simon
+*/
+
+
+int InitTarget(void) {
+  /*JLINK_SYS_MessageBox("-- cJTAG Mode Selected!! --");*/
+  JLINK_ExecCommand("JTAG_Speed = 4000");
+  JLINK_SelectTIF(JLINK_TIF_CJTAG);
+  JLINK_ExecCommand("SetcJTAGInitMode = 1"); 
+  return 0;
+}
+
+int SetupTarget(void){
+  U32 r;
+  
+  r = MEM_ReadU32(0x6400101C);
+  r |= 0x100;
+  JLINK_MEM_WriteU32(0x6400101C, r);
+  
+  return 0;
+}
+
+int ResetTarget(void){
+  JLINK_TIF_ActivateTargetReset();
+  JLINK_SYS_Sleep(200);
+  JLINK_TIF_ReleaseTargetReset();
+}

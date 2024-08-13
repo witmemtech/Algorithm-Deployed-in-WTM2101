@@ -1,0 +1,23 @@
+TARGET ?= dsp_example
+
+NUCLEI_SDK_ROOT ?= ../../$(BUILD_ROOT_DIR)
+NUCLEI_SDK_NMSIS ?= $(NUCLEI_SDK_ROOT)/NMSIS
+
+SRCDIRS = .
+
+INCDIRS = . $(NUCLEI_SDK_NMSIS)/DSP/Include
+
+LIBDIRS = $(NUCLEI_SDK_NMSIS)/Library/DSP/GCC
+
+DSP_ENABLE ?= ON
+COMMON_FLAGS := -O2
+
+ifeq ($(DSP_ENABLE),ON)
+$(warning "Use and link with RISC-V DSP enabled library")
+COMMON_FLAGS += -D__RISCV_FEATURE_DSP=1 -D__RISCV_FEATURE_DSP=1
+LDLIBS = -lnmsis_dsp_$(RISCV_ARCH)p -lm
+else
+LDLIBS = -lnmsis_dsp_$(RISCV_ARCH) -lm
+endif
+
+include $(NUCLEI_SDK_ROOT)/Build/Makefile.base

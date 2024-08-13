@@ -1,0 +1,16 @@
+Changelog
+[!] Important
+[+] New
+[-] Fixed error
+[*] Changes
+
+----------------------------------------------------------------------------
+version v1.1.0.0
+dated 2023-02-10
+author:褚玮
+
+[+][!]
+添加DMA例程，主要包含dma_multi_block_auto_reload,dma_multi_block_linked_list,dma_single_block工程
+dma_multi_block_auto_reload               DMA自动重加载数据传输demo及说明文档.                  
+dma_multi_block_linked_list               DMA链表方式数据传输demo及说明文档.
+dma_single_block                          DMA单块传输demo及说明文档.

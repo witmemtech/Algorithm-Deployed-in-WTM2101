@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<WitmemStudio_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="WITIN_DCCRN" />
+		<Option type="General Project" />
+		<Option version="" />
+		<Option prompt="1" />
+		<Option CurTick="0" />
+		<Option IntervalTick="0" />
+		<Option IntervalDays="0" />
+		<Option compiler="riscv-elf-gcc" />
+		<Option virtualFolders="Application|Project/;Application|User/;datalink/;third_hardware/;Drivers|WTM2101_StdPeriph_Lib/;Application|NPU/;Drivers|Coroutine/;HAL/;third_software/;spi/;mnist/;RTT/" />
+		<Configuration title="common">
+			<Option output="Output\$(CONFIGURATION)\Exe\$(TARGET).elf" />
+			<Option object_output="Output\$(CONFIGURATION)\Obj\$(TARGET)" />
+			<Option deps_output="Output\$(CONFIGURATION)\Exe" />
+			<Option compiler="riscv-elf-gcc" />
+			<Option stack_size="1024" />
+			<Option heap_size="1024" />
+			<Option project_dependencies="Library" />
+			<Option type="0" />
+			<Compiler gcc_c_language_standard="gnu99" gcc_optimization_level="-O3" gcc_debugging_level="-g3" rv_architecture="rv32imafc" rv_abi="ilp32f" c_preprocessor_definitions="PLATFORM_RSIC_V_N307;CONFIG_$(CONFIGURATION);HSI_VALUE=24576000;HSE_VALUE=24576000;__SIZEOF_WCHAR_T=4;__SES_RISCV;__HEAP_SIZE__=1024;__SES_VERSION=56600;__GNU_LINKER" directory="..\..\WTM2101_SDK\Common\Libraries\Device\WITIN\WTM2101\Include\;..\..\WTM2101_SDK\Common\Libraries\WTM2101_StdPeriph_Lib\inc\;..\..\WTM2101_SDK\Common\Libraries\WTM2101_Syslib\Inc\;..\..\WTM2101_SDK\Common\Libraries\WTM2101_NPU_Lib\inc\;..\..\WTM2101_SDK\Common\Libraries\NMSIS\Core\Include\;..\..\WTM2101_SDK\Common\Libraries\NMSIS\DSP\Include\;..\..\WTM2101_SDK\Common\Libraries\NMSIS\NN\Include\;..\..\WTM2101_SDK\Common\Libraries\HAL_Driver\inc\;..\..\WTM2101_SDK\Common\Libraries\WTM2101_Ucontext\Inc\;..\..\WTM2101_SDK\Utilities\RTT\;..\..\WTM2101_SDK\Common\Middlewares\ring_cache\;..\..\WTM2101_SDK\Common\Middlewares\heap\;..\third_hardware\inc\;..\third_software\inc\;..\npu\;..\kws_process\inc\;..\link\;..\inc\;..\spi\;..\alg_kws\;..\alg_kws\include\;..\alg_gsc\;..\alg_enc\inc\;..\protocol_hci\;..\AlgFramework\;..\kws_lib\include\;..\..\WitinProgramTool_WTM2101\;..\..\WitinProgramTool_WTM2101\libNPU\;..\Lib\;..\datalink\Include\;..\datalink\Inc\;..\Lib\aec\;..\MIDDLEWARE\AW88394\;..\alg_aec_wdl\inc\;..\alg_agc\inc\;..\..\npu_driver_bb04\;..\third_lib\getinfo\;..\Lib\inc\;$(WTPATH)\toolchains\risc-v\include\" c_additional_options="-quiet;-fomit-frame-pointer;-Werror;-fshort-enums;-gpubnames;-fno-common;-fno-dwarf2-cfi-asm;-ffunction-sections;-fdata-sections;-fmessage-length=0;-fno-diagnostics-show-caret;-nostdinc;-fsingle-precision-constant" />
+			<ASCompiler c_additional_options="--traditional-format" />
+			<Linker linker_output_format="bin" gcc_entry_point="vector_base" printf_floating_point_supported="Float" printf_integer_support="int" printf_width_precision_supported="Yes" wide_characters_supported="No" scanf_floating_point_supported="No" scanf_integer_support="int" scanf_classes_supported="No" linker_additional_options="-X;--omagic;--relax;--gc-sections;--emit-relocs" directory="$(WTPATH)\toolchains\risc-v\lib\" />
+			<Debugger Break_at_Main="1" Break_at_Main_Symbol="main" is_softreset="1" target_conn="1" is_startRTT="1" target_rtt_conn="0" target_interface="JTAG" speed="4000" JLinkScriptFileName="../../WTM2101_SDK/Common/Libraries/Device/WITIN/WTM2101/Script/wtm2101_4w.JLinkScript" />
+		</Configuration>
+		<Configuration title="RAM_DEMO">
+			<Inherit project_dependencies="1" />
+			<Compiler c_preprocessor_definitions="__ECLIC_PRESENT;__DSP_PRESENT;HAL_AUDIO_ENABLE">
+				<Inherit c_additional_options="1" directory="1" c_preprocessor_definitions="1" />
+			</Compiler>
+			<Linker linkerScriptFile="../link/ilm_dlm.ld" library="../third_lib/getinfo/GetChipID.a">
+				<Inherit linker_additional_options="1" directory="1" library="1" />
+			</Linker>
+			<Debugger JLinkScriptFileName="../link/bb04p1_4w.JLinkScript" />
+		</Configuration>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/HAL_Driver/src/hal_audio.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="HAL" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/HAL_Driver/src/hal_clock.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="HAL" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/HAL_Driver/src/hal_i2s.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="HAL" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/afc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/audio.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/dma.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/fbank.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/gpio.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/i2c.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/i2s.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/npu.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/pmu.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/pwm.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/qspi.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/rcc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/rtc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/spi.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/timer.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/uart.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_StdPeriph_Lib/src/wdt.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|WTM2101_StdPeriph_Lib" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Src/intexc_NUCLEI_N.S">
+			<Option compilerVar="SS" />
+			<Option virtualFolder="Application|Project" />
+			<Option compiler="RAM_DEMO" configuration="RAM_DEMO" use="1" c_additional_options="-quiet;-Werror;-fmessage-length=0;-fno-diagnostics-show-caret;-nostdinc;-E;-lang-asm;" buildCommandMacro="$compiler;$options;$includes;$file;-o;$object" />
+			<Option compiler="RAM_DEMO" configuration="RAM_DEMO" useAS="1" c_additional_options="--traditional-format;-g;-gdwarf-4;" buildASCommandMacro="$assembly;$options;$file;-o;$object" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Src/osc_clock_calibration.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Application|Project" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Src/startup_NUCLEI_N.S">
+			<Option compilerVar="SS" />
+			<Option virtualFolder="Application|Project" />
+			<Option compiler="RAM_DEMO" configuration="RAM_DEMO" use="1" c_additional_options="-quiet;-Werror;-fmessage-length=0;-fno-diagnostics-show-caret;-nostdinc;-E;-lang-asm;" buildCommandMacro="$compiler;$options;$includes;$file;-o;$object" />
+			<Option compiler="RAM_DEMO" configuration="RAM_DEMO" useAS="1" c_additional_options="--traditional-format;-g;-gdwarf-4;" buildASCommandMacro="$assembly;$options;$file;-o;$object" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Src/wtm2101_hal.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Application|Project" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Src/wtm2101_mmap.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Application|Project" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_Syslib/Src/wtm2101_system.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Application|Project" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_Ucontext/Src/riscv_intrinsic.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|Coroutine" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_Ucontext/Src/ucontext.s">
+			<Option compilerVar="SS" />
+			<Option virtualFolder="Drivers|Coroutine" />
+			<Option compiler="RAM_DEMO" configuration="RAM_DEMO" use="1" c_additional_options="-quiet;-Werror;-fmessage-length=0;-fno-diagnostics-show-caret;-nostdinc;-E;-lang-asm;" buildCommandMacro="$compiler;$options;$includes;$file;-o;$object" />
+			<Option compiler="RAM_DEMO" configuration="RAM_DEMO" useAS="1" c_additional_options="--traditional-format;-g;-gdwarf-4;" buildASCommandMacro="$assembly;$options;$file;-o;$object" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Libraries/WTM2101_Ucontext/Src/ucontext_c.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Drivers|Coroutine" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Middlewares/heap/heap.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="third_software" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Common/Middlewares/ring_cache/ring_cache.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="third_software" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Utilities/RTT/SEGGER_RTT.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="RTT" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Utilities/RTT/SEGGER_RTT.h">
+			<Option target="&lt;{~None~}&gt;" />
+			<Option virtualFolder="RTT" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Utilities/RTT/SEGGER_RTT_Conf.h">
+			<Option target="&lt;{~None~}&gt;" />
+			<Option virtualFolder="RTT" />
+		</Unit>
+		<Unit filename="../../WTM2101_SDK/Utilities/RTT/SEGGER_RTT_Syscalls_SES.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="RTT" />
+		</Unit>
+		<Unit filename="../../WitinProgramTool_WTM2101/LibNPU/LibNPU.a">
+			<Option virtualFolder="Application|NPU" />
+		</Unit>
+		<Unit filename="../../npu_model/output_attention/register.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Application|NPU" />
+		</Unit>
+		<Unit filename="../Hotfix/riscv_abs8.h">
+			<Option target="&lt;{~None~}&gt;" />
+			<Option virtualFolder="Application|NPU" />
+		</Unit>
+		<Unit filename="../Inc/basic_config.h">
+			<Option target="&lt;{~None~}&gt;" />
+			<Option virtualFolder="Application|User" />
+		</Unit>
+		<Unit filename="../Inc/main.h">
+			<Option target="&lt;{~None~}&gt;" />
+			<Option virtualFolder="Application|User" />
+		</Unit>
+		<Unit filename="../Inc/mnist_data.h">
+			<Option target="&lt;{~None~}&gt;" />
+			<Option virtualFolder="mnist" />
+		</Unit>
+		<Unit filename="../Lib/RAM_DEMO/Library.a">
+			<Option virtualFolder="Application|NPU" />
+		</Unit>
+		<Unit filename="../Src/basic_config.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Application|User" />
+		</Unit>
+		<Unit filename="../Src/bb04p1_hal.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Application|User" />
+		</Unit>
+		<Unit filename="../Src/main.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Application|User" />
+		</Unit>
+		<Unit filename="../Src/retarget.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Application|Project" />
+		</Unit>
+		<Unit filename="../Src/rsm_driver.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Application|User" />
+		</Unit>
+		<Unit filename="../Src/wtm2101_it.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Application|User" />
+		</Unit>
+		<Unit filename="../datalink/Source/applink_rv32.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="datalink" />
+		</Unit>
+		<Unit filename="../datalink/Source/applink_win32.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="datalink" />
+		</Unit>
+		<Unit filename="../datalink/Source/crc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="datalink" />
+		</Unit>
+		<Unit filename="../datalink/Source/datalink.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="datalink" />
+		</Unit>
+		<Unit filename="../datalink/Source/jtaglink_rv32.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="datalink" />
+		</Unit>
+		<Unit filename="../datalink/Source/jtagxfer_ll.s">
+			<Option compilerVar="SS" />
+			<Option virtualFolder="datalink" />
+			<Option compiler="RAM_DEMO" configuration="RAM_DEMO" use="1" c_additional_options="-quiet;-Werror;-fmessage-length=0;-fno-diagnostics-show-caret;-nostdinc;-E;-lang-asm;" buildCommandMacro="$compiler;$options;$includes;$file;-o;$object" />
+			<Option compiler="RAM_DEMO" configuration="RAM_DEMO" useAS="1" c_additional_options="--traditional-format;-g;-gdwarf-4;" buildASCommandMacro="$assembly;$options;$file;-o;$object" />
+		</Unit>
+		<Unit filename="../npu/cnn_framework.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Application|NPU" />
+		</Unit>
+		<Unit filename="../spi/crc32.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="spi" />
+		</Unit>
+		<Unit filename="../spi/dspi.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="spi" />
+		</Unit>
+		<Unit filename="../spi/hash.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="spi" />
+		</Unit>
+		<Unit filename="../spi/spi_transfer_protocol.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="spi" />
+		</Unit>
+		<Unit filename="../spi/vfs_list.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="spi" />
+		</Unit>
+		<Unit filename="../third_hardware/src/audio_config.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="third_hardware" />
+		</Unit>
+		<Unit filename="../third_hardware/src/fbank_config.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="third_hardware" />
+		</Unit>
+		<Unit filename="../third_hardware/src/gpio_config.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="third_hardware" />
+		</Unit>
+		<Unit filename="../third_hardware/src/rtc_config.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="third_hardware" />
+		</Unit>
+		<Unit filename="../third_hardware/src/uart_config.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="third_hardware" />
+		</Unit>
+		<Unit filename="../third_hardware/src/uart_rx_dma.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="third_hardware" />
+		</Unit>
+		<Unit filename="../third_hardware/src/uart_tx_config.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="third_hardware" />
+		</Unit>
+		<Unit filename="../third_software/src/audio_handle.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="third_software" />
+		</Unit>
+	</Project>
+</WitmemStudio_project_file>

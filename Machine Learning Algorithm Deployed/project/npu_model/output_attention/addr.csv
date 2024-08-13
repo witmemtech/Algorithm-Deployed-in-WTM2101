@@ -1,0 +1,9 @@
+net_idx,layer_name,layer_type,round_type,round_idx,flow_idx,in/out,addr,type,len,file
+
+
+0,"qkvmat","OpType::MV_OP",array,0,1,in,384,regfile,392,layer_debug/net0/1_qkvmat/round0/input0.txt
+0,"qkvmat","OpType::MV_OP",array,0,1,out,776,regfile,384,layer_debug/net0/1_qkvmat/round0/output0.txt
+
+
+1,"head","OpType::MV_OP",array,0,1,in,10,regfile,512,layer_debug/net1/1_head/round0/input0.txt
+1,"head","OpType::MV_OP",array,0,1,out,522,regfile,10,layer_debug/net1/1_head/round0/output0.txt

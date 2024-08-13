@@ -1,0 +1,23 @@
+Changelog
+[!] Important
+[+] New
+[-] Fixed error
+[*] Changes
+
+----------------------------------------------------------------------------
+version v1.1.0.0
+dated 2023-02-10
+author:徐善锋
+
+[+][!]
+添加UART相关演示DEMO，主要包含uart_dma,uart_fifo,uart_int,uart_polling文件夹。
+uart_dma: UART使用DMA方式发送接收数据相关DEMO。
+uart_fifo: UART使用FIFO方式发送接收数据相关DEMO。
+uart_int: UART使用中断方式发送接收数据相关DEMO。
+uart_polling: UART使用轮询方式发送接收数据相关DEMO。
+
+[-] [!]Fixed error
+无
+
+[*] Changes
+无

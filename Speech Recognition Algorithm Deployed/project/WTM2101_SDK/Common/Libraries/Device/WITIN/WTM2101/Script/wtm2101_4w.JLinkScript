@@ -1,0 +1,20 @@
+/*
+File    : WTM2101.JLinkScript
+Purpose : Script for WTM2101 under JTAG
+Author  : Simon
+*/
+
+
+int InitTarget(void) {
+  /*JLINK_SYS_MessageBox("-- JTAG Mode Selected!! --");*/
+  JLINK_ExecCommand("JTAG_Speed = 4000");
+  JLINK_SelectTIF(JLINK_TIF_JTAG);
+  return 0;
+}
+
+
+int ResetTarget(void){
+  JLINK_TIF_ActivateTargetReset();
+  JLINK_SYS_Sleep(200);
+  JLINK_TIF_ReleaseTargetReset();
+}

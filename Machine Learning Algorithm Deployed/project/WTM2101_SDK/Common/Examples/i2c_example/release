@@ -1,0 +1,17 @@
+Changelog
+[!] Important
+[+] New
+[-] Fixed error
+[*] Changes
+
+----------------------------------------------------------------------------
+version v1.1.0.0
+dated 2023-02-10
+author: wuyutong
+
+[+][!]
+添加 I2C 例程，主要包含 i2c, i2c_dma, i2c_int, i2c_slave_dma 工程
+i2c                           I2C 轮询读取传感器参数工程及说明文档.
+i2c_dma                       I2C 使用 DMA 读写 EEPROM 工程及说明文档.
+i2c_int                       I2C 以中断方式读取传感器参数工程及说明文档.
+i2c_slave_dma                 I2C Slave 模式下使用 DMA 首发数据工程及说明文档.

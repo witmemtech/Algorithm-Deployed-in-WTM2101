@@ -1,0 +1,53 @@
+1.0.1  rewrite: modify rv32 source, applink as api
+1.0.2  feature: changeable framesize
+1.0.3  bugfixed: riff.length in wav file is 0, update wav header every 1K bytes received.
+1.0.4  feature: new msg debug
+1.0.5  feature: change receiving frame from int16_t[160] to int16_t[1024]
+1.0.6  feature: add new dataex message
+1.0.7  bugfixed: same value fixed
+1.0.8  feature: add debuglink
+1.0.9  bugfixed: missing `const` in crc parameter
+1.0.10 feature: full-mode jtaglink
+1.0.11 feature: rewrite win32 api
+1.0.12 rewrite: tidy flow
+    (ebreak mode, handshake)
+    dev ----report--> pc
+    dev <-heartbeat-- pc
+    (stream mode, handshake)
+    dev <--info------ pc
+    dev ---ack------> pc
+    dev ---info-----> pc
+    dev <--ack------- pc
+    (stream mode, infer)
+    dev <--data------ pc
+    dev ---data-----> pc
+    ...
+    dev <--data------ pc
+    dev ---data-----> pc
+    ...
+    dev <--ack------- pc
+1.0.13: bugfixed: compile warning
+1.0.14: feature: eof and spectrum
+    (ebreak mode, handshake)
+    dev ----report--> pc
+    dev <-heartbeat-- pc
+    (stream mode, handshake)
+    dev <--info------ pc
+    dev ---ack------> pc
+    dev ---info-----> pc
+    dev <--ack------- pc
+    (stream mode, infer)
+    dev <--data------ pc
+    dev ---data-----> pc
+    ...
+    dev <--data------ pc
+    dev ---data-----> pc
+    ...
+    dev <--eof------- pc
+    dev --eof-------> pc
+1.0.15: change: spectrum_mask add label[8]
+1.0.16: minor changes
+1.0.17: feature: add `command` & `status`
+1.0.18: bugfixed: typo
+1.0.19: change jtaglink fifosize
+1.0.20: add jtaglink_fifo_status

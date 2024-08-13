@@ -1,0 +1,16 @@
+Changelog
+[!] Important
+[+] New
+[-] Fixed error
+[*] Changes
+
+----------------------------------------------------------------------------
+version v1.1.0.0
+dated 2023-02-10
+author:李天琦
+
+[+][!]
+添加HAL例程，主要包含hal_audio,hal_clock,hal_i2s工程
+hal_audio                            hal_audio基本功能并获取hal_audio数据demo及说明文档.                  
+hal_clock                            切换不同时钟源并输出demo及说明文档.
+hal_i2s                              hal_i2s接收与发送demo及说明文档.

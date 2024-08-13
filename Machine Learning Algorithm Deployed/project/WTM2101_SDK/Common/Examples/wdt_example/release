@@ -1,0 +1,15 @@
+Changelog
+[!] Important
+[+] New
+[-] Fixed error
+[*] Changes
+
+----------------------------------------------------------------------------
+version v1.1.0.0
+dated 2023-02-10
+author:褚玮
+
+[+][!]
+添加WDT例程，主要包含timer_case
+wdt_case                               wdt使用例程及说明文档.
+

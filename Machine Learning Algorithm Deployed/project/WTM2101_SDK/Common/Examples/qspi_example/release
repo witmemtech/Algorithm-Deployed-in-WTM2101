@@ -1,0 +1,17 @@
+Changelog
+[!] Important
+[+] New
+[-] Fixed error
+[*] Changes
+
+----------------------------------------------------------------------------
+version v1.1.0.0
+dated 2023-02-10
+author:褚玮
+
+[+][!]
+添加QSPI例程，主要包含qspi_flash_dma,qspi_flash_mem_mapped,qspi_flash_w25q64jv
+qspi_flash_dma                     QSPI通过DMA读写外部flash demo及说明文档.
+qspi_flash_mem_mapped              QSPI在sram boot mode下以内存映射方式读取外部flash demo及说明文档.
+qspi_flash_w25q64jv                QSPI读写w25q64jv flash demo及说明文档.
+

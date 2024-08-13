@@ -1,0 +1,149 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="WTM2101" target="20" version="2">
+  <project Name="DEMO">
+    <configuration
+      Name="Common"
+      arm_linker_heap_size="1024"
+      arm_linker_stack_size="1024"
+      linker_output_format="hex"
+      linker_section_placement_file="Setup/sram_placement_riscv.xml"
+      linker_section_placements_segments="FLASH1 RX 0x00000000 0x00100000;RAM1 RWX 0x20000000 0x00010000"
+      project_directory=""
+      project_type="Executable"
+      target_device_name="RV32" />
+    <folder Name="user">
+      <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc" />
+      <file file_name="../Src/main.c" />
+      <file file_name="../Src/flash_25wq.c" />
+      <file file_name="../../../../Libraries/WTM2101_Syslib/Src/retarget.c" />
+      <file file_name="../../../../Libraries/WTM2101_Syslib/Src/wtm2101_hal.c" />
+      <file file_name="../../../../Libraries/WTM2101_Syslib/Src/wtm2101_mmap.c" />
+      <file file_name="../../../../Libraries/WTM2101_Syslib/Src/wtm2101_system.c" />
+      <file file_name="../../../../Libraries/WTM2101_Syslib/Src/osc_clock_calibration.c" />
+    </folder>
+    <configuration
+      JLinkExecuteCommand=""
+      JLinkScriptFileName="$(ProjectDir))/../../../../Libraries/Device/WITIN/WTM2101/Script/wtm2101_4w.JLinkScript"
+      Name="JTAG__RAM_Debug"
+      arm_compiler_variant="gcc"
+      arm_keep_assembly="No"
+      arm_keep_preprocessor_output="No"
+      c_additional_options="-O2"
+      c_only_additional_options="-fsingle-precision-constant"
+      c_preprocessor_definitions="__ECLIC_PRESENT"
+      c_user_include_directories="$(ProjectDir))/../../../../Libraries/Device/WITIN/WTM2101/Include/;$(ProjectDir))/../../../../Libraries/WTM2101_StdPeriph_Lib/inc/;$(ProjectDir))/../../../../Libraries/NMSIS/Core/Include/;$(ProjectDir))/../../../../../Utilities/RTT/;$(ProjectDir))/../Inc;$(ProjectDir))/../../../../Libraries/HAL_Driver/inc;$(ProjectDir))/../../../../Middlewares/ring_cache/;$(ProjectDir))/../../../../Libraries/WTM2101_NPU_Lib/inc/;$(ProjectDir))/../../../../Libraries/WTM2101_Syslib/Inc"
+      debug_target_connection="J-Link"
+      gcc_debugging_level="Level 3"
+      gcc_entry_point="vector_base"
+      gcc_optimization_level="Level 2 for speed"
+      gcc_short_enum="Minimal Container Size"
+      link_dependent_projects="Yes"
+      link_include_standard_libraries="Yes"
+      link_linker_script_file="../../../../Libraries/Device/WITIN/WTM2101/Script/ram.ld"
+      link_use_linker_script_file="Yes"
+      linker_output_format="bin"
+      linker_printf_fp_enabled="Float"
+      linker_printf_width_precision_supported="Yes"
+      linker_scanf_character_group_matching_enabled="No"
+      linker_section_placement_file="$(ProjectDir)/Setup/sram_placement_riscv.xml"
+      linker_section_placements_segments="FLASH1 RX 0x08000000 0x0001F000;RAM1 RWX 0x30020000 0x0020000"
+      rv_abi="ilp32f"
+      rv_architecture="rv32imafc"
+      speed="0"
+      stack_size="1024"
+      target_device_name="WTM2101" />
+    <configuration
+      JLinkExecuteCommand=""
+      JLinkScriptFileName="$(ProjectDir))/../../../../Libraries/Device/WITIN/WTM2101/Script/wtm2101_2w.JLinkScript"
+      Name="cJTAG__RAM_Debug"
+      arm_compiler_variant="gcc"
+      arm_keep_assembly="No"
+      arm_keep_preprocessor_output="No"
+      c_additional_options="-O2"
+      c_only_additional_options="-fsingle-precision-constant"
+      c_preprocessor_definitions="__ECLIC_PRESENT"
+      c_user_include_directories="$(ProjectDir))/../../../../Libraries/Device/WITIN/WTM2101/Include/;$(ProjectDir))/../../../../Libraries/WTM2101_StdPeriph_Lib/inc/;$(ProjectDir))/../../../../Libraries/NMSIS/Core/Include/;$(ProjectDir))/../../../../../Utilities/RTT/;$(ProjectDir))/../Inc;$(ProjectDir))/../../../../Libraries/HAL_Driver/inc;$(ProjectDir))/../../../../Middlewares/ring_cache/;$(ProjectDir))/../../../../Libraries/WTM2101_NPU_Lib/inc/;$(ProjectDir))/../../../../Libraries/WTM2101_Syslib/Inc"
+      debug_target_connection="J-Link"
+      gcc_debugging_level="Level 3"
+      gcc_entry_point="vector_base"
+      gcc_optimization_level="Level 2 for speed"
+      gcc_short_enum="Minimal Container Size"
+      link_dependent_projects="Yes"
+      link_include_standard_libraries="Yes"
+      link_linker_script_file="../../../../Libraries/Device/WITIN/WTM2101/Script/ram.ld"
+      link_use_linker_script_file="Yes"
+      linker_output_format="bin"
+      linker_printf_fp_enabled="Float"
+      linker_printf_width_precision_supported="Yes"
+      linker_scanf_character_group_matching_enabled="No"
+      linker_section_placement_file="$(ProjectDir)/Setup/sram_placement_riscv.xml"
+      linker_section_placements_segments="FLASH1 RX 0x08000000 0x0001F000;RAM1 RWX 0x30020000 0x0020000"
+      rv_abi="ilp32f"
+      rv_architecture="rv32imafc"
+      speed="4000"
+      stack_size="1024"
+      target_device_name="WTM2101"
+      target_interface_type="cJTAG" />
+    <folder Name="startup">
+      <configuration
+        Name="JTAG__RAM_Debug"
+        c_preprocessor_definitions="__ECLIC_PRESENT  " />
+      <configuration
+        Name="cJTAG__RAM_Debug"
+        c_preprocessor_definitions="__ECLIC_PRESENT  " />
+      <file file_name="../../../../Libraries/WTM2101_Syslib/Src/intexc_NUCLEI_N.S" />
+      <file file_name="../../../../Libraries/WTM2101_Syslib/Src/startup_NUCLEI_N.S" />
+    </folder>
+    <folder Name="rtt">
+      <file file_name="../../../../../Utilities/RTT/SEGGER_RTT.c" />
+      <file file_name="../../../../../Utilities/RTT/SEGGER_RTT_Syscalls_SES.c" />
+    </folder>
+    <folder Name="hal_driver">
+      <file file_name="../../../../Libraries/HAL_Driver/src/hal_audio.c" />
+      <file file_name="../../../../Libraries/HAL_Driver/src/hal_i2s.c" />
+      <file file_name="../../../../Libraries/HAL_Driver/src/hal_clock.c" />
+    </folder>
+    <folder Name="middleware">
+      <file file_name="../../../../Middlewares/heap/heap.c" />
+      <file file_name="../../../../Middlewares/ring_cache/ring_cache.c" />
+    </folder>
+    <folder Name="lib">
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/afc.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/audio.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/dma.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/fbank.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/gpio.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/i2c.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/i2s.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/npu.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/pmu.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/pwm.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/qspi.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/rcc.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/rtc.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/spi.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/timer.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/uart.c" />
+      <file file_name="../../../../Libraries/WTM2101_StdPeriph_Lib/src/wdt.c" />
+    </folder>
+    <folder Name="npu">
+      <file file_name="../../../../Libraries/WTM2101_NPU_Lib/lib/LibNPU.a" />
+    </folder>
+  </project>
+  <configuration
+    Name="JTAG__RAM_Debug"
+    arm_keep_preprocessor_output="Yes"
+    c_preprocessor_definitions="BOOTRAM;DEBUG"
+    gcc_debugging_level="Level 3"
+    gcc_optimization_level="Level 2 for size"
+    linker_printf_fp_enabled="Float"
+    linker_printf_width_precision_supported="Yes" />
+  <configuration
+    Name="cJTAG__RAM_Debug"
+    arm_keep_preprocessor_output="Yes"
+    c_preprocessor_definitions="BOOTRAM;DEBUG"
+    gcc_debugging_level="Level 3"
+    gcc_optimization_level="Level 2 for size"
+    linker_printf_fp_enabled="Float"
+    linker_printf_width_precision_supported="Yes" />
+</solution>

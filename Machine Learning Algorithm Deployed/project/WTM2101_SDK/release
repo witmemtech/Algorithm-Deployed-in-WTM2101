@@ -1,0 +1,40 @@
+Changelog
+[!] Important
+[+] New
+[-] Fixed error
+[*] Changes
+
+----------------------------------------------------------------------------
+version v1.1.0.0
+dated 2023-02-10
+author:李剑
+
+[+][!]
+Common目录
+1.Examples目录,包括afc示例，audio示例，ctx示例，dma示例，fft示例，gpio示例，hal示例,i2c示例,i2s示例，pmu示例，pwm示例，qspi示例，rtc示例，spi示例，timer示例，uart示例，wdt示例
+2.Library目录
+    Device文件夹，其子目录WITIN\WTM2101文件下内容包括jlink 脚本文件，程序在芯片内存分配的链接文件，以及芯片外设的寄存器定义，启动文件和中断汇编文件    
+    HAL_Driver文件夹，硬件抽象层,对下层硬件接口进行封装,向上层提供更灵活的接口 
+    NMSIS文件夹，内核相关文件
+    WTM2101_Lib，其他内核相关的抽象文件
+    WTM2101_NPU_Lib，内核NPU库相关文件
+    WTM2101_StdPeriph_Lib，标准外设库相关文件
+    WTM2101_Ucontext，上下文切换相关文件
+3.Middleware目录
+    heap文件夹，堆管理相关软件
+    ring_cache，环形缓冲区相关软件
+4.Templates目录
+     空工程目录
+
+Solutions目录,添加3个示例工程:
+1.double_dmic_by_i2s_send,此Solution主要展示Audio数据通路并配合i2s数据通路的处理过程
+    其中Audio使用双路dmic采集音频信号,i2s为单工仅发送.当Audio数据采集完成,使用i2s通路将数据进行发送
+2.i2s_full_duplex,此Solution主要展示2路i2s数据通路处理过程.
+    其中1路i2s1为全双工收发,另外1路i2s0为单工仅接收.程序合并处理i2s0接收以及i2s1接收数据,然后通过i2s1进行数据发送
+3.STM32F429_jtag,此Solution主要展示两种模式：jtag与cjtag下载固件
+
+Utilities目录
+1. RTT驱动
+
+
+

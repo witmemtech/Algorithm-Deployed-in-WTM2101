@@ -1,0 +1,19 @@
+Changelog
+[!] Important
+[+] New
+[-] Fixed error
+[*] Changes
+
+----------------------------------------------------------------------------
+version v1.1.0.0
+dated 2023-02-10
+author:李剑，李天琦
+
+[+][!]
+添加3个示例工程:
+1.double_dmic_by_i2s_send,此Solution主要展示Audio数据通路并配合i2s数据通路的处理过程
+    其中Audio使用双路dmic采集音频信号,i2s为单工仅发送.当Audio数据采集完成,使用i2s通路将数据进行发送
+2.i2s_full_duplex,此Solution主要展示2路i2s数据通路处理过程.
+    其中1路i2s1为全双工收发,另外1路i2s0为单工仅接收.程序合并处理i2s0接收以及i2s1接收数据,然后通过i2s1进行数据发送
+3.STM32F429_jtag,此Solution主要展示两种模式：jtag与cjtag下载固件
+

@@ -1,0 +1,15 @@
+layerOptiConfig {
+    name : "head"
+    inputOpti {
+        shift : 0
+        num : 0
+        signed_input : 256
+    }
+    weightOpti {
+        shift : 0
+        num : 0
+    }
+    doubleWeightOpti {
+        multiple : 0
+    }
+}

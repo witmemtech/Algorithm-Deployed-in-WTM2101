@@ -1,0 +1,12 @@
+~$*.xlsx
+~$*.docx
+*.emSession
+*.axf
+*.bak
+*.bin
+*.elf
+*.exe
+*.o
+*.jlink
+tags
+Output

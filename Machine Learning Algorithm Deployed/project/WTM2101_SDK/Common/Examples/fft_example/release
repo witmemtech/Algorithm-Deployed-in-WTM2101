@@ -1,0 +1,16 @@
+Changelog
+[!] Important
+[+] New
+[-] Fixed error
+[*] Changes
+
+----------------------------------------------------------------------------
+version v1.1.0.0
+dated 2023-02-10
+author:许雪姝
+
+[+][!]
+fft：添加readme.md文件
+
+[*] Changes
+系统时钟修改为内部24MHz时钟经过外部32.768khz晶振校准

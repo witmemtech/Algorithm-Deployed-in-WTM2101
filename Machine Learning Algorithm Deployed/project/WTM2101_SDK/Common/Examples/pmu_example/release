@@ -1,0 +1,19 @@
+Changelog
+[!] Important
+[+] New
+[-] Fixed error
+[*] Changes
+
+----------------------------------------------------------------------------
+version v1.1.0.0
+dated 2023-02-10
+author:王文雅
+
+[+][!]
+添加PMU例程，主要包含audio_vad_rsm2,gpio_rsm，gpio_sbm，wdt_rsm，rtc_rsm
+audio_vad_rsm2                              RSM2模式下audio VAD唤醒及说明文档.
+gpio_rsm                                    RSM0,RSM1,RSM2模式下，GPIO WAKEUP唤醒及说明文档.
+gpio_sbm                                    Standby模式下，GPIO WAKEUP唤醒及说明文档.
+wdt_rsm                                     RSM0,RSM2模式下，WDT唤醒及说明文档.
+rtc_rsm                                     RSM0,RSM2模式下，RTC唤醒及说明文档.
+----------------------------------------------------------------------------

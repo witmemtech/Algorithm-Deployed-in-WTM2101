@@ -1,0 +1,25 @@
+Changelog
+[!] Important
+[+] New
+[-] Fixed error
+[*] Changes
+
+----------------------------------------------------------------------------
+version v1.1.0.0
+dated 2023-02-10
+author:徐善锋
+
+[+][!]
+添加SPI相关演示DEMO，主要包含spi_dma_send_receive，spi_fifo_master_send_receive，spi_fifo_slave_send_receive，spi_flash，spi_int_master_send_slave_receive，spi_lcd文件夹。
+spi_dma_send_receive: SPI master使用DMA方式发送接收数据相关DEMO。
+spi_fifo_master_send_receive: SPI master使用FIFO方式发送接收数据相关DEMO。
+spi_fifo_slave_send_receive: SPI slave使用FIFO方式发送接收数据相关DEMO。
+spi_flash: SPI master对FLASH(ZD25wq)进行读写擦操作演示DEMO。
+spi_int_master_send_slave_receive: SPI master使用中断方式发送接收数据相关DEMO。
+spi_lcd: SPI master对LCD显示屏进行控制画图上色等操作相关的DEMO。
+
+[-] [!]Fixed error
+无
+
+[*] Changes
+无
