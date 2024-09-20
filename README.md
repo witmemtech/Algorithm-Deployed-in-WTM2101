@@ -73,11 +73,11 @@ Witmem Studio是由知存科技开发的一款全功能集成开发环境，包�
 
 ## 算法部署基础步骤
 
-***\*实验环境搭建\**** 
+***\实验环境搭建\**** 
 
-***\*模块⼀：软件包下载及环境搭建\**** 
+***\模块⼀：软件包下载及环境搭建\**** 
 
-***\*步骤一：搭建docker、mappper环境：\****
+***\步骤一：搭建docker、mappper环境：\****
 
 ①Linux下通过Docker直接下载，获取指令：
 
@@ -158,7 +158,7 @@ python3 tests/python/frontend/onnx/witin/wtm2101/precision/XXXX.py
 
 ***\模块⼀：简介\**** 
 
-**1、\WTMDK2101-X3介绍\
+1、\WTMDK2101-X3介绍\
 
 ​	WTMDK2101-X3是针对WTM2101 AI SOC设计的评估板，包含：
 
@@ -179,7 +179,7 @@ python3 tests/python/frontend/onnx/witin/wtm2101/precision/XXXX.py
 
 ***\模块⼆：搭建算法训练工程，完成算法训练与量化\****
 
-\1. 模型训练工程搭建:
+1. 模型训练工程搭建:
 
 提供DNN和DNN_DEEP两种网络结构的示例，
 
