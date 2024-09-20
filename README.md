@@ -128,7 +128,7 @@ python3 tests/python/frontend/onnx/witin/wtm2101/precision/XXXX.py
 
  
 
-***\*步骤二：搭建IDE环境\****
+***\步骤二：搭建IDE环境\****
 
 ①预先下载安装包，下载安装
 
@@ -142,23 +142,23 @@ python3 tests/python/frontend/onnx/witin/wtm2101/precision/XXXX.py
 
  
 
-***\*步骤三：其他需要安装的软件\****
+***\步骤三：其他需要安装的软件\****
 
 ① 请确保安装以下环境：python, git, pytorch
 
  
 
-***\*步骤四：下载训练数据\****
+***\步骤四：下载训练数据\****
 
 ① 最新数据集在软件安装包中
 
 
 
-***\*动⼿实验： 基于WTM2101的算法部署\****
+***\动⼿实验： 基于WTM2101的算法部署\****
 
-***\*模块⼀：简介\**** 
+***\模块⼀：简介\**** 
 
-**1、*****\*WTMDK2101-X3介绍\****
+**1、\WTMDK2101-X3介绍\
 
 ​	WTMDK2101-X3是针对WTM2101 AI SOC设计的评估板，包含：
 
@@ -177,25 +177,25 @@ python3 tests/python/frontend/onnx/witin/wtm2101/precision/XXXX.py
 
 ##### 2，训练数据集
 
-***\*模块⼆：搭建算法训练工程，完成算法训练与量化\****
+***\模块⼆：搭建算法训练工程，完成算法训练与量化\****
 
-\1. **模型训练****工程搭建****:** 
+\1. 模型训练工程搭建:
 
 提供DNN和DNN_DEEP两种网络结构的示例，
 
-***\*步骤一：\****配置python/config.py，参数释义见代码注释。
+***\步骤一：\配置python/config.py，参数释义见代码注释。
 
-***\*步骤二：\****运行python/train.py，模型训练完毕后，在models/net_type文件夹下生成bestModel.pth，此即我们的模型权重。
+***\步骤二：\运行python/train.py，模型训练完毕后，在models/net_type文件夹下生成bestModel.pth，此即我们的模型权重。
 
-***\*步骤三：\****运行python/onnx_converter.py，在models/net_type文件夹下生成bestModel.onnx。此步骤即完成原始模型到知存onnx格式模型的转换。
+***\步骤三：\运行python/onnx_converter.py，在models/net_type文件夹下生成bestModel.onnx。此步骤即完成原始模型到知存onnx格式模型的转换。
 
 
 
-***\*模块三：算法模型转换\****
+***\模块三：算法模型转换\
 
-***\*1，\*******\*Dcoker下\*******\*M\*******\*apper转换流程\****
+***\1，Dcoker下\Mapper转换流程\****
 
-***\*步骤一：\****拷贝至指定文件夹
+***\步骤一：\拷贝至指定文件夹
 
 我们将mapper/input 拷贝至witin/toolchain:v001.000.034的指定文件夹下（通常为/home，需与gen_mapper.py文件里描述一致）
 
@@ -205,7 +205,7 @@ python3 tests/python/frontend/onnx/witin/wtm2101/precision/XXXX.py
 
  
 
-***\*步骤二：\****在workplace\witin_mapper下执行gen_mapper.py
+***\步骤二：\在workplace\witin_mapper下执行gen_mapper.py
 
 docker start id
 
@@ -220,7 +220,7 @@ python3 /home/mapper/input/gen_mapper.py
 
  
 
-***\*步骤三：\****在对应的output文件下获得输出
+***\步骤三：\在对应的output文件下获得输出
 
  
 ![image-20240806180212761](https://github.com/user-attachments/assets/5d724ed8-0f18-4cd2-8cd6-153c4f0cdf87)
@@ -232,13 +232,13 @@ python3 /home/mapper/input/gen_mapper.py
 
  
 
-***\*模块四：算法模型烧写\****
+***\模块四：算法模型烧写
 
-***\*步骤一：\****系统连接：
+***\步骤一：\系统连接：
 
 进行模型烧录和开发时，我们需要将JTAG，核心板，NPU烧写板连接好，并打开开关，如系统连接示意图所示。
 
-***\*步骤二：\****
+***\步骤二：
 
 ![image-20240806180222235](https://github.com/user-attachments/assets/3cc17ad5-0330-446b-b642-58ba6cfb61a1)
 
@@ -249,7 +249,7 @@ python3 /home/mapper/input/gen_mapper.py
 
  
 
-***\*步骤三：\****跳线帽连接：
+***\步骤三：\跳线帽连接：
 
 如跳线帽连接示意图所示，按照红框标注进行跳线连接。含义解释：
 
@@ -281,13 +281,13 @@ python3 /home/mapper/input/gen_mapper.py
 
  
 
-***\*步骤四\*******\*：\****
+***\步骤四：
 
 使用project/ WitinProgramTool_WTM2101下的WitinProgramTool.exe进行模型权重烧写。烧写时的开发板接线请参考其他文档。
 
  
 
-***\*步骤五：\****烧写指令:
+***\步骤五：烧写指令:
 
 .\WitinProgramTool.exe -m init
 
@@ -301,20 +301,20 @@ python3 /home/mapper/input/gen_mapper.py
 
 
 
-***\*模块五：算法模型在芯片运行推理\****
+***\模块五：算法模型在芯片运行推理
 
-**步骤一：**
+**步骤一：
 
 从库中下载知存IDE Witmem Studio。
 
-***\*步骤二：\****
+**步骤二：
 
 生成的mapper/output/register.c放在project/Model，使用Witmem Studio打开project/Project/SES-RISCV/Demo.wmproject。
 
 ![image-20240806180429940](https://github.com/user-attachments/assets/02ff58f0-9837-4764-a71e-b55bfb940b6c)
 
 
-***\*步骤三：\****Target->Download下载工程：
+**步骤三：Target->Download下载工程：
  
 
 ![image-20240806180434987](https://github.com/user-attachments/assets/1c5f9432-891c-49cb-ae79-e06a57949314)
@@ -325,7 +325,7 @@ python3 /home/mapper/input/gen_mapper.py
 
  
 
-***\*步骤四\****：
+**步骤四：
 
 打开tools中的串口工具，设置波特率115200，查看准确率输出
 
