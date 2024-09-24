@@ -351,3 +351,5 @@ python3 /home/mapper/input/gen_mapper.py
 
 AISHELL-WakeUp-1数据集是中英文唤醒词语音数据库，命令词为“你好，米雅” “hi, mia”，语音数据库中唤醒词语音3936003条，1561.12小时，邀请254名发言人参与录制。录制过程在真实家居环境中，设置7个录音位，使用6个圆形16路PDM麦克风阵列录音板做远讲拾音(16kHz，16bit)、1个高保真麦克风做近讲拾音(44.1kHz，16bit)。此数据库可用于声纹识别、语音唤醒识别等研究使用。
 
+
+Gitcode links:https://gitcode.com/m0_58966968/WITMEM-Algorithm-Deployed-in-WTM2101/overview 
