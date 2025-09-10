@@ -35,10 +35,6 @@ WTMDK2101-X3是针对WTM2101 AI SOC设计的评估板，包含：
 
 （2）和I/O 板：WTM2101运行需要的电源、以及应用I/O接口等。
 
-![img](http://www.witintech.com/wladmin/kindeditor/attached/image/20231204/20231204220711_75537.png)
-
-![img](http://www.witintech.com/wladmin/kindeditor/attached/image/20231204/20231204220748_82242.png)
-
 
 
 ## Mapper
